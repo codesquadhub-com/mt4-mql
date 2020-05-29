@@ -38,6 +38,19 @@ extern string Signal.Sound         = "on | off | auto*";
 extern string Signal.Mail.Receiver = "on | off | auto* | {email-address}";
 extern string Signal.SMS.Receiver  = "on | off | auto* | {phone-number}";
 
+
+string EventCondition    = "(TrendChange|Cross)[Up|Down][@bar] | auto*";    // e.g. TrendChange[1] | Cross[0] | CrossUp[1]
+string EventAction.Sound = "on | off | auto*";
+string EventAction.Mail  = "on | off | auto* | {email-address}";
+string EventAction.SMS   = "on | off | auto* | {phone-number}";
+string EventAction.Trade = "{cmd} | auto*";
+
+//ConfigureCondition()
+//ConfigureSoundAction()
+//ConfigureMailAction()
+//ConfigureSMSAction()
+//ConfigureTradeAction()
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <core/indicator.mqh>
